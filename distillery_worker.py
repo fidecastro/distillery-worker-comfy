@@ -1,4 +1,4 @@
-##### Distillery Worker for serverless Runpod - Comfy - Version 2.4 Angostura - Aug 24 2023
+##### Distillery Worker for serverless Runpod - Comfy - Version 2.5 Eau de Vie - Sep 20 2023
 
 import time
 import runpod
@@ -95,6 +95,9 @@ class InputPreprocessor:
                 elif key in ['SD15_CONTROLNET_MODEL_NAME','SDXL_CONTROLNET_MODEL_NAME']:
                     model_to_add = template_inputs[key]
                     models_to_fetch.append({"model_type": "controlnet_model", "model_name": model_to_add})
+                elif key in ['SD15_INPAINT_CONTROLNET_MODEL_NAME','SDXL_INPAINT_CONTROLNET_MODEL_NAME']:
+                    model_to_add = template_inputs[key]
+                    models_to_fetch.append({"model_type": "controlnet_model", "model_name": model_to_add})                
             return models_to_fetch
         except Exception as e:
             exc_type, exc_value, exc_traceback = sys.exc_info()

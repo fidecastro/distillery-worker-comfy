@@ -11,7 +11,7 @@ COPY distillery_comfy.py .
 COPY distillery_worker.py .
 COPY set_env_variables.sh .
 COPY docker_run.sh .
-#COPY test_input.json .
+COPY test_payload.json .
 
 RUN git config --global --add safe.directory '*'
 
