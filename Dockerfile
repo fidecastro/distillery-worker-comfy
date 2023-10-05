@@ -1,5 +1,5 @@
 # Using the latest Distillery SD filesystem as the base image
-FROM felipeinfante/distillery-worker:base-comfy
+FROM felipeinfante/distillery-worker:base-comfy-20230930
 
 # Setting the working directory in the container
 WORKDIR /workspace
